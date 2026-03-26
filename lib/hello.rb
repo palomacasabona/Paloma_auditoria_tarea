@@ -1,5 +1,7 @@
-# Default is World
-# Author: Paloma Casabona (p.casabona.a@gmail.com)
-name = ARGV.first || "Mundo"
+require 'greeter'
 
-puts "¡Hola, #{nombre}!"
+# Default is World
+name = ARGV.first || "World"
+
+greeter = Greeter.new(name)
+puts greeter.greet
